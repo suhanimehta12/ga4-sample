@@ -22,17 +22,18 @@
             padding: 20px;
         }
     </style>
+
     <!-- GA4 Global Site Tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RETJ103D5P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        // Replace G-XXXXXXX with your GA4 Measurement ID
-        gtag('config', 'G-XXXXXXX');
+        // Use your actual GA4 Measurement ID
+        gtag('config', 'G-RETJ103D5P', { 'debug_mode': true });
 
-        // Page view event (optional, GA4 tracks automatically)
+        // Optional: explicit page_view event
         gtag('event', 'page_view', {
             page_title: document.title,
             page_location: window.location.href
@@ -51,9 +52,9 @@
         let hasScrolled100 = false;
 
         window.addEventListener('scroll', () => {
-            let scrollTop = window.scrollY;
-            let docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            let scrollPercent = (scrollTop / docHeight) * 100;
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
 
             if (!hasScrolled50 && scrollPercent >= 50) {
                 hasScrolled50 = true;
